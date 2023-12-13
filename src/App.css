@@ -1,0 +1,147 @@
+@import './var.css';
+
+main{
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  width: 100vw;
+  padding: 15px;
+  background: rgb(8,8,8);
+  background: linear-gradient(90deg, rgba(8,8,8,1) 0%, rgba(8,8,15,1) 46%, rgba(72,83,85,1) 100%);
+}
+
+.logo-container img{
+  width: 100px;
+  justify-content: center;
+}
+
+.menu-options{
+  display: flex;
+  justify-content: center;
+  gap: 8px ;
+  
+}
+
+
+.btn{
+  background: rgb(148,148,163);
+  background: radial-gradient(circle, rgba(148,148,163,1) 0%, rgba(56,129,215,1) 100%);
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  color:var(--color-text);
+  padding: 4px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.btn:hover{
+  color: var(--color-transition);
+  transition: 400ms;
+}
+
+.date{
+  font-size: 15px;
+  background: rgb(148,148,163);
+  background: radial-gradient(circle, rgba(148,148,163,1) 0%, rgba(56,129,215,1) 100%);
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.content-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-grow: 1;
+}
+
+h1{
+  font-size: 52px;
+}
+
+.bubble {
+  background-color: rgba(51, 37, 37, 0.116);
+  padding: 12px 14px;
+  border-radius: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.foguete{
+    right: 15px;
+    transform: rotate(-100deg);
+    bottom: 30%;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    animation: balance 2000ms alternate 400ms infinite;
+  }
+
+  &.satelite{
+    top: 20%;
+    right: 100px;
+    transform: rotate(-50deg);
+    font-size: 42px;
+    width: 80px;
+    height: 80px;
+    animation: balance 2000ms alternate 400ms infinite;
+  }
+  
+  &.cometa{
+    top: 6%;
+    left: 5px;
+    font-size: 52px;
+    width: 150px;
+    height: 150px;
+    animation: balance 2000ms alternate 400ms infinite;
+  }
+
+  &.astronauta{
+    bottom: 2%;
+    left: 10%;
+    font-size: 52px;
+    transform: rotate(20deg);
+    width: 120px;
+    height: 120px;
+    animation: balance 1000ms alternate 400ms infinite;
+  }
+
+}
+
+@keyframes balance {
+  0% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+
+.informations{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(106,106,148,1) 46%, rgba(40,95,106,1) 100%);
+  display: flex;
+  width: 70%;
+  gap: 50px;
+  padding: 30px;
+  border-radius: 30px; 
+  justify-content: center;
+}
+
+li{
+  padding-top: 30px;
+}
